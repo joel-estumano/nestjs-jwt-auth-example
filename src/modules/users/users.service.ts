@@ -6,7 +6,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()
-export class usersService {
+export class UsersService {
 
     constructor(
         @InjectModel(User.name) private readonly userModel: Model<User>,

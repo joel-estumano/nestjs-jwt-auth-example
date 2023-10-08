@@ -2,12 +2,12 @@ import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { TkInterface } from './entities/token.interface';
-import { usersService } from '../users/users.service';
+import { UsersService } from '../users/users.service';
 
 @Injectable()
 export class AuthService {
     constructor(
-        private userService: usersService,
+        private userService: UsersService,
         private jwtService: JwtService,
     ) { }
 
